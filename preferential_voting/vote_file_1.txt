@@ -1,0 +1,82 @@
+/usr/local/bin/python3.8 /Users/khouripa/Documents/simulation/preferential_voting/pref_3.py
+ A,B,C,D,E,F
+
+Voting total: 100 votes
+Starting Round 1
+A : 12
+B : 20
+C : 21
+D : 18
+E : 11
+F : 18
+A: p: 1 , c: 12 --
+B: p: 1 , c: 20 --
+C: p: 1 , c: 21 --
+D: p: 1 , c: 18 --
+E: p: 1 , c: 11 --
+F: p: 1 , c: 18 --
+The following lowest count candidate(s) have been removed: E
+Candidates for the next round are: A,B,C,D,F
+------------------------------
+Starting Round 2
+A : 13
+B : 22
+C : 22
+D : 23
+E : 0
+F : 20
+A: p: 1 , c: 12 -- p: 2 , c: 1 --
+B: p: 1 , c: 20 -- p: 2 , c: 2 --
+C: p: 1 , c: 21 -- p: 2 , c: 1 --
+D: p: 1 , c: 18 -- p: 2 , c: 5 --
+E:
+F: p: 1 , c: 18 -- p: 2 , c: 2 --
+The following lowest count candidate(s) have been removed: A
+Candidates for the next round are: B,C,D,F
+------------------------------
+Starting Round 3
+A : 0
+B : 29
+C : 24
+D : 26
+E : 0
+F : 21
+A:
+B: p: 1 , c: 20 -- p: 2 , c: 6 -- p: 3 , c: 3 --
+C: p: 1 , c: 21 -- p: 2 , c: 3 --
+D: p: 1 , c: 18 -- p: 2 , c: 7 -- p: 3 , c: 1 --
+E:
+F: p: 1 , c: 18 -- p: 2 , c: 3 --
+The following lowest count candidate(s) have been removed: F
+Candidates for the next round are: B,C,D
+------------------------------
+Starting Round 4
+A : 0
+B : 37
+C : 30
+D : 32
+E : 0
+F : 1
+A:
+B: p: 1 , c: 20 -- p: 2 , c: 12 -- p: 3 , c: 5 --
+C: p: 1 , c: 21 -- p: 2 , c: 6 -- p: 3 , c: 2 -- p: 4 , c: 1 --
+D: p: 1 , c: 18 -- p: 2 , c: 12 -- p: 3 , c: 2 --
+E:
+F: p: 2 , c: 1 --
+The following lowest count candidate(s) have been removed: C
+Candidates for the next round are: B,D
+------------------------------
+Starting Round 5
+A : 0
+B : 51
+C : 5
+D : 43
+E : 0
+F : 1
+The winner is B with 51 votes
+A:
+B: p: 1 , c: 20 -- p: 2 , c: 18 -- p: 3 , c: 11 -- p: 4 , c: 1 -- p: 5 , c: 1 --
+C: p: 1 , c: 1 -- p: 2 , c: 3 -- p: 3 , c: 1 --
+D: p: 1 , c: 18 -- p: 2 , c: 18 -- p: 3 , c: 5 -- p: 4 , c: 1 -- p: 5 , c: 1 --
+E:
+F: p: 2 , c: 1 --
