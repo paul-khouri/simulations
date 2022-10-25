@@ -27,8 +27,12 @@ def run_vote(vote,n):
     return votes
 
 
-def votes_csv(f, header_list, votes):
-    writeFile = open(f, "w")
+def votes_csv(f, header_list, votes, a=False):
+    if a:
+        writeFile = open(f, "a")
+    else:
+        writeFile = open(f, "w")
+
     header_string = " ," + ','.join(header_list)+'\n'
     writeFile.write(header_string)
     c = 1
@@ -39,6 +43,16 @@ def votes_csv(f, header_list, votes):
         row = "{}\n".format(str)
         writeFile.write(row)
         c += 1
+
+
+    writeFile.close()
+    return None
+
+def stats_csv(f,table):
+    writeFile = open(f, "a")
+    writeFile.write('\n')
+    for row in table:
+        writeFile.write(','.join(str(e) for e in row) + '\n')
     writeFile.close()
     return None
 
@@ -80,7 +94,7 @@ def run_count_round(bin_base,votes, available_candidates,i ,n):
     else:
         return False, bin_temp
 
-def get_bin_stats(bin):
+def get_bin_stats(f,bin):
     header=["A","B","C","D","E", "F"]
     col = [1,2,3,4,5,6]
     table=[]
@@ -116,6 +130,9 @@ def get_bin_stats(bin):
             # a candidate with that preference level)
             table[tab_row][tab_col] = value
     #print_lists_as_table(table)
+    stats_csv(f, table)
+
+
     print_lists_as_table(tanspose_table(table))
 
 
@@ -144,10 +161,6 @@ def tanspose_table(table):
             temp.append(table[r][c])
         new_table.append(temp)
     return new_table
-
-
-    
-
 
     return None
 
@@ -195,20 +208,22 @@ for x, y in voting_paper.items():
 available_candidates.append(temp)
 # run the vote
 # random allocation of preferences and number of preferences
-n =250
+n =100
 votes = run_vote(voting_paper,n)
 f = "vote_file.csv"
 votes_csv(f,temp, votes)
 bins=[]
 output= "Voting total: {} votes".format(n)
 print(output)
-for i in range(0,5):
+result = False
+for i in range(0,50):
     output = "Starting Round {}".format(i+1)
     print(output)
-    result, bin = run_count_round(bin_base,votes,available_candidates,i,n)
-    bins.append(bin)
-    if result is not True and len(available_candidates[i])>2:
-        get_bin_stats(bins[i])
+
+    if result is not True and len(available_candidates[i])>=2:
+        result, bin = run_count_round(bin_base, votes, available_candidates, i, n)
+        bins.append(bin)
+        get_bin_stats(f,bins[i])
         lowest_count_candidates=complete_round(bins[i],n, available_candidates[i])
         output = "The following lowest count candidate(s) have been removed: {} ".format(','.join(lowest_count_candidates))
         print(output)
@@ -217,7 +232,11 @@ for i in range(0,5):
         print(output)
         available_candidates.append(temp)
     else:
-        get_bin_stats(bins[i])
+        if result:
+            print("Have majority")
+        else:
+            print("No Majority")
+
         break
     print("-"*30)
     # check for winner
