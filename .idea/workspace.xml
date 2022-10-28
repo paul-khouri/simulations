@@ -22,13 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0296314-5a51-472b-b66c-08a553a79f89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/preferential_voting/pref_read_votes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preferential_voting/pref_read_votes_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preferential_voting/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preferential_voting/vote_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/preferential_voting/vote_file.csv" afterDir="false" />
-    </list>
+    <list default="true" id="e0296314-5a51-472b-b66c-08a553a79f89" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
