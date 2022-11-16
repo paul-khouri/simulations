@@ -7,5 +7,7 @@
 # Ignore pycache
 __pycache__
 
+preferential_voting/__pycache__
+
 # Ignore virtual environment
 venv
