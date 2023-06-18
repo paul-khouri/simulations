@@ -1,0 +1,68 @@
+:root {
+    --main-bg: rgb(197, 197, 197);
+    --main-bg-color: rgb(74,134,190);
+    --main-nav-text:rgb(255,255,255);
+    --main-nav-bg: rgb(237,46,46);
+    --main-nav-hover: rgb(161, 20, 20);
+    --main-box-bg: rgb(237,46,46);
+
+}
+
+body{
+    font-size: 100%;
+    background-color: var(--main-bg);
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+}
+
+/* ----- navigation ---- */
+.bg-nav{
+    background-color: var(--main-nav-bg);
+}
+.nav-link, .nav-link:hover{
+    color: var(--main-nav-text);
+    font-size: 1.2em;
+
+}
+
+.nav-item:hover{
+    background-color:var(--main-nav-hover);
+    border-radius: 0.5em;
+
+}
+/* ----- containers ---- */
+.container-bg{
+    background-color: var(--main-box-bg);
+}
+
+/*---- form --- */
+label{
+    color: white;
+
+}
+.form-check-input{
+    font-size: 1.5em;
+}
+
+.form-control{
+    font-size: 2em;
+}
+
+.speaker-form{
+    background: #F6F7F8;
+    border: 1px solid white;
+    border-radius: 15px;
+    width:100%;
+    padding: 0em;
+    margin: 0 0 0em 0;
+}
+.speaker-form label{
+    color: black;
+    margin: 0.5em 0;
+    font-size: 1.5em;
+}
+
+.table{
+    color:black;
+    font-size: 1.5em;
+}
